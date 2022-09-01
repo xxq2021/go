@@ -1,24 +1,22 @@
 package main
 
-import "fmt"
-
 func main() {
 	// 数组的定义
 	// 数组长度是类型的一部分。
 
-	// var a [3]string
-	// var b [3]int
-	// var c [4]bool
-	// fmt.Printf("a:%T,b:%T,c:%T", a, b, c) // a:[3]string,b:[3]int,c:[4]bool
+	//var a [3]string
+	//var b [3]int
+	//var c [4]bool
+	//fmt.Printf("a:%T,b:%T,c:%T", a, b, c) // a:[3]string,b:[3]int,c:[4]bool
 
 	// 数组的初始化
 	// 第一种方法
-	// var a [3]int
-	// fmt.Println(a) // [0 0 0]
-	// a[0] = 1
-	// a[1] = 2
-	// a[2] = 3
-	// fmt.Println(a) // [1 2 3]
+	//var a [3]int
+	//fmt.Println(a) // [0 0 0]
+	//a[0] = 1
+	//a[1] = 2
+	//a[2] = 3
+	//fmt.Println(a) // [1 2 3]
 
 	// var b [2]string
 	// fmt.Println(b) // [ ]
@@ -42,13 +40,13 @@ func main() {
 	// 第四种方法
 	// 让编译器根据初始值的个数进行自行判断数组的长度
 
-	// var a = [...]string{"北京", "上海", "广州", "深圳"}
+	//var a = [...]string{"北京", "上海", "广州", "深圳"}
 	// fmt.Printf("a: %T", a) // a: [4]string
 	// fmt.Println(a)         // [北京 上海 广州 深圳]
 
 	// 查看数组长度
 
-	// fmt.Println(len(a)) // 4
+	//fmt.Println(len(a)) // 4
 
 	// 根据下标改变数组里的值
 
@@ -57,9 +55,9 @@ func main() {
 
 	// 第四种初始化方式
 	// 指定索引值
-
-	var b = [...]int{1: 1, 2: 2, 5: 3}
-	fmt.Println(b)         // [0 1 2 0 0 3]
-	fmt.Printf("b: %T", b) // b: [6]int
+	//
+	//var b = [...]int{1: 1, 2: 2, 5: 3}
+	//fmt.Println(b)         // [0 1 2 0 0 3]
+	//fmt.Printf("b: %T", b) // b: [6]int
 
 }

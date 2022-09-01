@@ -54,24 +54,23 @@ func main() {
 	}
 
 	// for range
-	// for _, v1 := range a {
-	// 	for _, v2 := range v1 {
-	// 		fmt.Println(v2)
-	// 	}
-	// }
-
-	// for
-
-	for i := 0; i < len(a); i++ {
-		for j := 0; j < len(a[i]); j++ {
-			fmt.Println(a[i][j])
-
+	for _, v1 := range a {
+		for _, v2 := range v1 {
+			fmt.Println(v2)
 		}
 	}
 
-	var b = [...][2]string{
-		{"苏州", "厦门"},
-		{"成都", "深圳"},
-	}
-	fmt.Println(b) // [[苏州 厦门] [成都 深圳]]
+	// for
+	//
+	//for i := 0; i < len(a); i++ {
+	//	for j := 0; j < len(a[i]); j++ {
+	//		fmt.Println(a[i][j])
+	//	}
+	//}
+
+	//var b = [...][2]string{
+	//	{"苏州", "厦门"},
+	//	{"成都", "深圳"},
+	//}
+	//fmt.Println(b) // [[苏州 厦门] [成都 深圳]]
 }
