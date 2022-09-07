@@ -44,6 +44,12 @@ func main() {
 	//fmt.Println(c == nil) // false
 	//fmt.Println(d == nil) // false
 
+	// 切片的长度和容量
+	// var a = []int{1, 2, 3, 4, 5, 6}
+	// fmt.Printf("切片长度: %v 容量: %v\n", len(a), cap(a))
+	// b := a[2:4]
+	// fmt.Printf("切片长度: %v 容量: %v", len(b), cap(b))
+
 	// 切片的循环遍历
 	//var a = []string{"北京", "上海", "广州", "深圳", "成都"}
 	// for 循环
@@ -72,54 +78,70 @@ func main() {
 	//fmt.Printf("切片长度：%v,切片容量：%v", len(e), cap(e))
 
 	// 基于切片的切片
-	//var a = []string{"北京", "上海", "广州", "深圳", "成都"}
-	//var b = a[3:]
-	//fmt.Println(b)
+	// var a = []string{"北京", "上海", "广州", "深圳", "成都"}
+	// var b = a[3:]
+	// fmt.Println(b)
 	//a = append(a, 1, 2, 3, 4, 5)
 	//b := []int{11, 12, 13, 14, 15}
 	//a = append(a, b...)
 	//fmt.Println(a)
 
 	// make 函数创建切片
-	//a := make([]int, 5, 8)
-	//fmt.Printf("%v - %T - len: %v - cap: %v", a, a, len(a), cap(a))
+	// a := make([]int, 5, 8)
+	// fmt.Printf("%v - %T - len: %v - cap: %v", a, a, len(a), cap(a))
 	// 切片赋值
-	//a[0] = 1
-	//a[1] = 2
-	//a[2] = 3
-	//a[3] = 4
-	//a[4] = 5
-	//fmt.Println(a) // [1 2 3 4 5]
+	// a[0] = 1
+	// a[1] = 2
+	// a[2] = 3
+	// a[3] = 4
+	// a[4] = 5
+	// fmt.Println(a) // [1 2 3 4 5]
 	// 修改切片
-	//var b = []string{"北京", "上海", "广州", "深圳"}
-	//b[2] = "苏州"
-	//fmt.Println(b)
+	// var b = []string{"北京", "上海", "广州", "深圳"}
+	// b[2] = "苏州"
+	// fmt.Println(b)
 
 	// 无法通过下标给切片扩容
+	// var a []int
+	// fmt.Printf("%v - len: %v - cap: %v", a, len(a), cap(a))
+	// a[0] = 1
+	// fmt.Println(a)
 
-	//var b = []string{"北京", "上海", "广州", "深圳"}
-	//fmt.Printf("len: %v - cap: %v", len(b), cap(b))
+	// var b = []string{"北京", "上海", "广州", "深圳"}
+	// fmt.Printf("len: %v - cap: %v", len(b), cap(b))
 	//b[4] = "苏州"
 	//fmt.Println(b) // panic: runtime error: index out of range [4] with length 4
 
 	// append() 数组扩容
 	// append的使用
-	//var a = make([]int, 4, 8)
-	//a = append(a, 1)
-	//fmt.Println(a)
-	//fmt.Printf("len: %v - cap: %v", len(a), cap(a))
+	// a := make([]int, 5, 6)
+	// b := []int{1, 2, 3, 4}
+	// fmt.Println(a, b)
+	// a = append(a, b...)
+	// fmt.Println(a, len(a))
 
-	// 合并数组
-	//b := []int{2, 3, 4}
-	//b = append(a, b...)
-	//fmt.Println(b)
+	// var a = make([]int, 4, 8)
+	// a = append(a, 1)
+	// fmt.Println(a)
+	// fmt.Printf("len: %v - cap: %v", len(a), cap(a))
+
+	// 合并切片
+	// b := []int{2, 3, 4, 5}
+	// b = append(a, b...)
+	// fmt.Println(b)
+	// fmt.Println(len(b))
+
+	// sliceA := []string{"北京", "上海"}
+	// sliceB := []string{"广州", "深圳"}
+	// sliceA = append(sliceA, sliceB...)
+	// fmt.Println(sliceA)
 
 	// 切片的扩容
-	//var a []int
-	//for i := 0; i < 10; i++ {
-	//	a = append(a, i)
-	//	fmt.Printf("%v - len: %v - cap: %v - ptr: %p\n", a, len(a), cap(a), a)
-	//}
+	// var a []int
+	// for i := 0; i < 10; i++ {
+	// 	a = append(a, i)
+	// 	fmt.Printf("%v - len: %v - cap: %v - ptr: %p\n", a, len(a), cap(a), a)
+	// }
 
 	//a := []int{1, 2, 3, 4, 5}
 	//b := make([]int, 5, 5)
@@ -171,8 +193,22 @@ func main() {
 	//fmt.Println(b) // [11 1 2 3 4 5]
 
 	// 切片中删除元素
-	a := []int{1, 2, 3, 4, 5}
+	// a := []int{1, 2, 3, 4, 5}
 	// 删除索引为 2 的元素 a
-	a = append(a[:2], a[3:]...)
-	fmt.Println(a)
+	// 	a = append(a[:2], a[3:]...)
+	// 	fmt.Println(a)
+	// }
+
+	// 修改字符串
+
+	// 定义字符串
+	s := "白萝卜"
+	// 转换为rune类型
+	runeS := []rune(s)
+	// 进行替换
+	runeS[0] = '红'
+	// 转换为string类型
+	newS := string(runeS)
+	fmt.Println(newS)
+
 }
